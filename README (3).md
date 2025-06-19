@@ -16,7 +16,7 @@ Untuk membantu perusahaan mengatasi masalah ini akan dilakukan:
 4. Menyediakan alat untuk melakukan prediksi terhadap siswa yang akan melaksanakan dropout
 
 ### Persiapan
-Data bersumber dari [dicoding]([https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)](https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/README.md), dataset ini berisi demografi, kondisi gender, nationality, pekerjaan dan pendidikan orangtua, serta fitur lainnya
+Data bersumber dari [dicoding](https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/README.md), dataset ini berisi demografi, kondisi gender, nationality, pekerjaan dan pendidikan orangtua, serta fitur lainnya
 
 Setup environment:
 Sebelum mengkases file ipnyb diperlukan setup einvornment untuk python
@@ -34,22 +34,31 @@ Untuk mengakses file ipynb perlu diperhatikan
 
 Untuk mengakses Business Dashboard anda bisa melalui tautan berikut: [Business Dashboard](https://public.tableau.com/views/das2_17502973115640/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-Selain menyediakan dashboard pada proyek ini disediakan tools yang berupa alat prediksi untuk mengetahui potensi siswa drop out, untuk mengakses alat itu dapat melalui [link]() berikut
 
 ## Business Dashboard
-Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
+Business Dashboard dapat di lihat menggunakan [link](https://public.tableau.com/views/das2_17502973115640/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) ini.
+Berikut Beberapa hal yang di tampilkan di dalam dashboard
+- Jumlah siswa berdasarkan status
+- Visualisasi dari beberapa faktor yang mempengaruhi siswa melakukan dropout
+- Pada visualisasi ditampilkan perbandingan antara siswa yang droput, graduate dan enroled dalam satu kategori dalam satu fitur
 
 ## Menjalankan Sistem Machine Learning
 Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Selain itu, sertakan juga link untuk mengakses prototype tersebut.
 
 ```
-
+conda create --name main-ds python=3.9
+conda activate main-ds
+pip install -r requirements.txt
+streamlit run (nama file.py)
 ```
+Selain menyediakan dashboard pada proyek ini disediakan tools yang berupa alat prediksi untuk mengetahui potensi siswa drop out, untuk mengakses alat itu dapat melalui [link]() berikut
+
 
 ## Conclusion
-Jelaskan konklusi dari proyek yang dikerjakan.
+Ditemukan beberapa faktor yang mempengaruhi siswa melakukan dropout, diantaranya adalah Previous_qualification_grade, Admission_grade, Displaced, Tuition_fees_up_to_date, Scholarship_holder, Curricular_units_1st_sem_approved, Curricular_units_1st_sem_grade, Curricular_units_2nd_sem_approved, Curricular_units_2nd_sem_grade, dari sebagian besar siswa yang dropout dari perusahaan ditemukan faktor terbesar adalah dikarenakan Curricular_units_2nd_sem_approved dimana mereka yang tidak menyetujui curricular units pada semester kedua cenderung dropout
+
 
 ### Rekomendasi Action Items
 Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
-- action item 1
-- action item 2
+- Pihak institusi perlu memberikan edukasi atau pendekatan untuk  siswa mengambil atau menyetujui curricular units pada semester kedua
+- Setelah semester selesai hendaknya pihak institusi memberikan pembaljaran yang lebih intens pada siswa yang memiliki grade rendah pada kualifikasi sebelumnya
