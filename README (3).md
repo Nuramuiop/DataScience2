@@ -51,14 +51,15 @@ conda activate main-ds
 pip install -r requirements.txt
 streamlit run (nama file.py)
 ```
-Selain menyediakan dashboard pada proyek ini disediakan tools yang berupa alat prediksi untuk mengetahui potensi siswa drop out, untuk mengakses alat itu dapat melalui [link]() berikut
+Selain menyediakan dashboard pada proyek ini disediakan tools yang berupa alat prediksi untuk mengetahui potensi siswa drop out, untuk mengakses alat itu dapat melalui [link](https://datascience2-j8azzafc9rg5zaprbsooce.streamlit.app/) berikut
 
 
 ## Conclusion
-Ditemukan beberapa faktor yang mempengaruhi siswa melakukan dropout, diantaranya adalah Previous_qualification_grade, Admission_grade, Displaced, Tuition_fees_up_to_date, Scholarship_holder, Curricular_units_1st_sem_approved, Curricular_units_1st_sem_grade, Curricular_units_2nd_sem_approved, Curricular_units_2nd_sem_grade, dari sebagian besar siswa yang dropout dari perusahaan ditemukan faktor terbesar adalah dikarenakan Curricular_units_2nd_sem_approved dimana mereka yang tidak menyetujui curricular units pada semester kedua cenderung dropout
+Ditemukan beberapa faktor yang mempengaruhi siswa melakukan dropout, diantaranya adalah Previous_qualification_grade, Admission_grade, Displaced, Tuition_fees_up_to_date, Scholarship_holder, Curricular_units_1st_sem_approved, Curricular_units_1st_sem_grade, Curricular_units_2nd_sem_approved, Curricular_units_2nd_sem_grade, dari sebagian besar siswa yang dropout dari perusahaan ditemukan faktor terbesar adalah dikarenakan Curricular_units_2nd_sem_approved dimana mereka yang tidak mengambil curricular units pada semester 2 (0) berpotensi untuk melakukan dropout
 
 
 ### Rekomendasi Action Items
 Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
 - Pihak institusi perlu memberikan edukasi atau pendekatan untuk  siswa mengambil atau menyetujui curricular units pada semester kedua
 - Setelah semester selesai hendaknya pihak institusi memberikan pembaljaran yang lebih intens pada siswa yang memiliki grade rendah pada kualifikasi sebelumnya
+- Pihak institusi dapat melaksanakan penyelidikan lebih lanjut mengapa pada semester 2 banyak siswa tidak mengambil curricular units
