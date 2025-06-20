@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from sklearn.preprocessing import LabelEncoder
 
 model = joblib.load("model_gb.pkl")
 
