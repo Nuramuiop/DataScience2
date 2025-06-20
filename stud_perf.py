@@ -3,8 +3,7 @@ import pandas as pd
 import joblib
 from sklearn.preprocessing import LabelEncoder
 
-model = joblib.load("model_gb.pkl")
-le = joblib.load("encodere.joblib")
+model = joblib.load("model_with_labels.pkl")
 
 col1, col2 = st.columns([1, 5])
 with col1:
@@ -72,5 +71,4 @@ with st.expander("View the Raw Data"):
 
 if st.button('Predict'):
     prediction_result = model.predict(data)[0]
-    rasel = le.inverse_transform([prediction_result])[0]
-    st.write("Credit Scoring: {}".format(rasel))
+    st.write("Credit Scoring: {}".format(prediction_result))
