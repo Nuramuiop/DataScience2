@@ -4,7 +4,7 @@ import joblib
 from sklearn.preprocessing import LabelEncoder
 
 model = joblib.load("model_gb.pkl")
-le = joblib.load("encoder.joblib")
+performance_map = {0: "Poor", 1: "Good", 2: "Standard"}
 
 col1, col2 = st.columns([1, 5])
 with col1:
@@ -72,5 +72,4 @@ with st.expander("View the Raw Data"):
 
 if st.button('Predict'):
     prediction_result = model.predict(data)[0]
-    real_label = le.inverse_transform([prediction_result])[0]
-    st.write("Credit Scoring: {}".format(real_label))
+    st.write("Credit Scoring: {}".format(performance_map[prediction_result]))
