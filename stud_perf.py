@@ -4,7 +4,7 @@ import joblib
 from sklearn.preprocessing import LabelEncoder
 
 model = joblib.load("model_gb.pkl")
-le = joblib.load("encoder (1).joblib")
+le = joblib.load("encodere.joblib")
 
 col1, col2 = st.columns([1, 5])
 with col1:
