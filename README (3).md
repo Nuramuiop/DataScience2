@@ -51,7 +51,7 @@ conda activate main-ds
 pip install -r requirements.txt
 streamlit run (nama file.py)
 ```
-Selain menyediakan dashboard pada proyek ini disediakan tools yang berupa alat prediksi untuk mengetahui potensi siswa drop out, untuk mengakses alat itu dapat melalui [link](https://datascience2-j8azzafc9rg5zaprbsooce.streamlit.app/) berikut
+Selain menyediakan dashboard pada proyek ini disediakan tools yang berupa alat prediksi untuk mengetahui potensi siswa drop out, untuk mengakses alat itu dapat melalui [link](https://yyhntkynxhd9vzggrwsywj.streamlit.app/) berikut
 
 
 ## Conclusion
