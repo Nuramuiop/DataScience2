@@ -4,7 +4,7 @@ import joblib
 from sklearn.preprocessing import LabelEncoder
 
 model = joblib.load("model_gb.pkl")
-performance_map = {0: "Poor", 1: "Good", 2: "Standard"}
+le = joblib.looad("encoder.joblib")
 
 col1, col2 = st.columns([1, 5])
 with col1:
@@ -71,19 +71,6 @@ with st.expander("View the Raw Data"):
     st.dataframe(data=data, width=800, height=10)
 
 if st.button('Predict'):
-    input_dict = {
-        "Previous_qualification_grade": Previous_qualification_grade,
-        "Admission_grade": Admission_grade,
-        "Displaced": label_to_value[Displaced],
-        "Tuition_fees_up_to_date": label_to_value[Tuition_fees_up_to_date],
-        "Scholarship_holder": label_to_value[Scholarship_holder],
-        "Curricular_units_1st_sem_approved": Curricular_units_1st_sem_approved,
-        "Curricular_units_1st_sem_grade": Curricular_units_1st_sem_grade,
-        "Curricular_units_2nd_sem_approved": Curricular_units_2nd_sem_approved,
-        "Curricular_units_2nd_sem_grade": Curricular_units_2nd_sem_grade,
-    }
-
-    data = pd.DataFrame([input_dict])
-
     prediction_result = model.predict(data)[0]
-    st.write("🎯 Credit Scoring: **{}**".format(performance_map[prediction_result]))
+    rasel = le.inverse_transform(prediction_result)[0]
+    st.write("Credit Scoring: {}".format(rasel))
