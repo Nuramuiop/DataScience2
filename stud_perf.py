@@ -71,4 +71,4 @@ with st.expander("View the Raw Data"):
 if st.button('Predict'):
     prediction_result = model.predict(data)[0]
     real_label = le.inverse_transform([prediction_result])[0]
-    st.write("Credit Scoring: {}".format(prediction_result))
+    st.write("Credit Scoring: {}".format(real_label))
